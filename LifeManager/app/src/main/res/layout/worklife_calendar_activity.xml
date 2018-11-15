@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_description1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:text="빨간색 원 : Life, 초록색 원 : Work" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:mcv_showOtherDates="all" />
+
+    <TextView
+        android:id="@+id/tv_description2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:text="등록된 모든 일정"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/life_CalendarList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="#eeeeee">
+
+    </ListView>
+</LinearLayout>

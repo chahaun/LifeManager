@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/memo_box"
+            android:hint="제목 (  35자 제한 )"
+            android:maxLength="35"
+            android:paddingLeft="10dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/memo_box"
+            android:gravity="top"
+            android:hint="메모내용"
+            android:maxLines="6"
+            android:minLines="6"
+            android:padding="10dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contents"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="시간 설정"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="시간설정하기" />
+
+        <TextView
+            android:id="@+id/text_radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Work / Life 선택" />
+
+        <RadioGroup
+            android:id="@+id/work_and_life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_radio1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work" />
+
+            <RadioButton
+                android:id="@+id/radio_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Life" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text_radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/work_and_life"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="공개 범위" />
+
+        <RadioGroup
+            android:id="@+id/scope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_radio2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체공개" />
+
+            <RadioButton
+                android:id="@+id/radio_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구에게만 공개" />
+
+            <RadioButton
+                android:id="@+id/radio_noOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나만보기" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/cancel_button"
+            android:text="수정" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/scope"
+            android:layout_gravity="right"
+            android:text="취소" />
+    </RelativeLayout>
+</ScrollView>

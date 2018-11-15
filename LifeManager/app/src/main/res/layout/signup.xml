@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/signup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/signup_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="ID"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_id"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_below="@id/signup_id"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editbox"
+            android:hint=" ID를 입력해주세요."
+            android:maxLength="10"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/signup_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_id"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="PW"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_pw"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_below="@id/signup_pw"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editbox"
+            android:hint=" PW를 입력해주세요."
+            android:inputType="textPassword"
+            android:maxLength="13"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/signup_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_pw"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:maxLength="10"
+            android:text="이름"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_below="@id/signup_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editbox"
+            android:hint=" 이름을 입력해주세요."
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/signup_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="생년월일"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_birth"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_birth"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/spinner_year"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_birth"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/spinner_month"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/signup_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_year"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:text="성별"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_sex"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="남자"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/radio_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="여자"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/signup_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radiogroup_sex"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="전화번호"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_below="@id/signup_phonenum"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editbox"
+            android:hint=" '-'를 빼고 입력해주세요."
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_phonenum"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="작성 완료"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</ScrollView>
